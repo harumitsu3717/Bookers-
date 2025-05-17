@@ -39,11 +39,15 @@
 
 <%= form_with model: @book do |f| %>
 
-  <p>title</p>
-  <%= f.text_field :title, name: "book[title]" %>
+  <p>Title</p>
+    <div class="new_object">
+      <%= f.text_field :title, name: "book[title]" %>
+    </div>
 
-  <p>body</p>
-  <%= f.text_area :body, name: "book[body]" %>
+  <p>Body</p>
+  <div class="new_object">
+    <%= f.text_area :body, name: "book[body]" %>
+  </div>
 
   <%= f.submit 'Create Book' %>
 
